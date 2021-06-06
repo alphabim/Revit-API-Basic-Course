@@ -104,7 +104,6 @@
                     Width="100"
                     IsDefault="True"
                     Click="btnOk_Click"
-                    
                     Style="{DynamicResource ButtonStyle}"
                     />
 
