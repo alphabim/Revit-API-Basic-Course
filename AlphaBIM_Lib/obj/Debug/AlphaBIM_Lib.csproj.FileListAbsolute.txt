@@ -1,0 +1,10 @@
+D:\04_TRAINING\01_Revit API\02_Khoa Hoc Co Ban 2021\AlphaBIM_Lib\bin\Debug\AlphaBIM_Lib.dll
+D:\04_TRAINING\01_Revit API\02_Khoa Hoc Co Ban 2021\AlphaBIM_Lib\bin\Debug\AlphaBIM_Lib.pdb
+D:\04_TRAINING\01_Revit API\02_Khoa Hoc Co Ban 2021\AlphaBIM_Lib\obj\Debug\AlphaBIM_Lib.csproj.CoreCompileInputs.cache
+D:\04_TRAINING\01_Revit API\02_Khoa Hoc Co Ban 2021\AlphaBIM_Lib\obj\Debug\AlphaBIM_Lib.dll
+D:\04_TRAINING\01_Revit API\02_Khoa Hoc Co Ban 2021\AlphaBIM_Lib\obj\Debug\AlphaBIM_Lib.pdb
+D:\04_TRAINING\01_Revit API\02_Khoa Hoc Co Ban 2021\02.Solution\AlphaBIM_Lib\bin\Debug\AlphaBIM_Lib.dll
+D:\04_TRAINING\01_Revit API\02_Khoa Hoc Co Ban 2021\02.Solution\AlphaBIM_Lib\bin\Debug\AlphaBIM_Lib.pdb
+D:\04_TRAINING\01_Revit API\02_Khoa Hoc Co Ban 2021\02.Solution\AlphaBIM_Lib\obj\Debug\AlphaBIM_Lib.csproj.CoreCompileInputs.cache
+D:\04_TRAINING\01_Revit API\02_Khoa Hoc Co Ban 2021\02.Solution\AlphaBIM_Lib\obj\Debug\AlphaBIM_Lib.dll
+D:\04_TRAINING\01_Revit API\02_Khoa Hoc Co Ban 2021\02.Solution\AlphaBIM_Lib\obj\Debug\AlphaBIM_Lib.pdb
