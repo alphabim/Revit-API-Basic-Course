@@ -1,0 +1,129 @@
+﻿<mah:MetroWindow x:Name="MainWindow" x:Class="AlphaBIM.TransferParameterWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 mc:Ignorable="d"
+                 xmlns:alphaBim="clr-namespace:AlphaBIM"
+                 d:DataContext="{d:DesignInstance alphaBim:TransferParameterViewModel}"
+
+                 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+
+                 KeyDown="MainWindow_KeyDown"
+                 Title="Alpha BIM - Tranfer Parameter"
+                 ResizeMode="CanResize"
+                 ShowInTaskbar="True" 
+                 WindowStartupLocation="CenterScreen"
+                 Height="210.667" Width="417.5" 
+                 Topmost="True"
+
+                 >
+
+    <mah:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/MahApps.Metro.ALB;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="/MahApps.Metro.ALB;component/styles/light.blue.xaml" />
+
+                <ResourceDictionary Source="/MaterialDesignThemes.Wpf.ALB;component/Themes/materialdesigntheme.light.xaml"/>
+                <ResourceDictionary Source="/MaterialDesignThemes.Wpf.ALB;component/Themes/materialdesigntheme.defaults.xaml" />
+                <ResourceDictionary Source="/AlphaBIMWPF;component/Resource/Styles.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="{x:Type Button}"
+                   BasedOn="{StaticResource ButtonStyle}" />
+
+        </ResourceDictionary>
+    </mah:MetroWindow.Resources>
+
+    <mah:MetroWindow.LeftWindowCommands>
+        <mah:WindowCommands>
+            <Button Click="OpenWebSite">
+                <materialDesign:PackIcon Kind="HomeCircle"
+                                         Width="22"
+                                         Height="22" />
+            </Button>
+
+            <Button Click="CustomDevelopment">
+                <materialDesign:PackIcon Kind="DeveloperBoard"
+                                         Width="22"
+                                         Height="22" />
+
+            </Button>
+
+            <Button Click="Hello">
+                <materialDesign:PackIcon Kind="Facebook"
+                                         Width="22"
+                                         Height="22" />
+
+            </Button>
+
+        </mah:WindowCommands>
+    </mah:MetroWindow.LeftWindowCommands>
+
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <Button Click="Feedback">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="FaceAgent"
+                                                     Width="22" Height="22"
+                                                     VerticalAlignment="Center" />
+                            <TextBlock Margin="4 0 0 0"
+                                       VerticalAlignment="Center"
+                                       Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+
+        </mah:WindowCommands>
+
+    </mah:MetroWindow.RightWindowCommands>
+
+    <DockPanel x:Name="MainPanel" 
+                LastChildFill="True">
+
+        <DockPanel DockPanel.Dock="Bottom"
+                   LastChildFill="False"
+                   >
+
+            <Button DockPanel.Dock="Right"
+                    Content="CANCEL"
+                    Width="100"
+                    Click="btnCancel_Click"
+                    IsCancel="True"
+                    Style="{DynamicResource ButtonStyle}"
+                    />
+
+            <Button DockPanel.Dock="Right"
+                    Content="OK"
+                    Width="100"
+                    IsDefault="True"
+                    Click="btnOk_Click"
+                    
+                    Style="{DynamicResource ButtonStyle}"
+                    />
+
+        </DockPanel>
+
+
+        <ComboBox DockPanel.Dock="Top" 
+                  ItemsSource="{Binding AllSourceParameter}"
+                  SelectedItem="{Binding SelectedSourceParameter}"
+                  materialDesign:HintAssist.Hint="Hãy chọn Source Parameter"
+                  />
+
+        <ComboBox DockPanel.Dock="Top" 
+                  ItemsSource="{Binding AllTargetParameter}"
+                  SelectedItem="{Binding SelectedTargetParameter}"
+                  materialDesign:HintAssist.Hint="Hãy chọn Source Parameter"
+        />
+
+
+    </DockPanel>
+
+</mah:MetroWindow>

@@ -35,8 +35,27 @@
     <StartProgram>$(ProgramW6432)\Autodesk\Revit 2020\Revit.exe</StartProgram>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AlphaBIMWPF">
+      <HintPath>dllReference\AlphaBIMWPF.dll</HintPath>
+    </Reference>
     <Reference Include="AlphaBIM_Lib">
       <HintPath>AlphaBIM_Lib\bin\Debug\AlphaBIM_Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlzEx">
+      <HintPath>dllReference\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.ALB, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dllReference\MahApps.Metro.ALB.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors.ALB">
+      <HintPath>dllReference\MaterialDesignColors.ALB.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf.ALB">
+      <HintPath>dllReference\MaterialDesignThemes.Wpf.ALB.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors">
+      <HintPath>dllReference\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
     <Reference Include="RevitAPI">
       <HintPath>..\..\..\..\..\..\01_ALPHABIM\01_RevitAPI\AlphaBIM\dllsReference\2021\RevitAPI.dll</HintPath>
@@ -66,11 +85,63 @@
     <Compile Include="Lesson04_SelectionFiltering\LocDam.cs" />
     <Compile Include="Lesson04_SelectionFiltering\LocFaceDam.cs" />
     <Compile Include="Lesson05_Parameter\Lesson05Cmd.cs" />
+    <Compile Include="Lesson06_Design_Addin_With_WPF\SetElevationFloor\Lesson06Cmd.cs" />
+    <Compile Include="Lesson06_Design_Addin_With_WPF\SetElevationFloor\Lesson06ViewModel.cs" />
+    <Compile Include="Lesson06_Design_Addin_With_WPF\SetElevationFloor\Lesson06Window.xaml.cs">
+      <DependentUpon>Lesson06Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson06_Design_Addin_With_WPF\TransferParameter\TransferParameterCmd.cs" />
+    <Compile Include="Lesson06_Design_Addin_With_WPF\TransferParameter\TransferParameterViewModel.cs" />
+    <Compile Include="Lesson06_Design_Addin_With_WPF\TransferParameter\TransferParameterWindow.xaml.cs">
+      <DependentUpon>TransferParameterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\AssemblyLoader.cs" />
+    <Compile Include="Lib\ParameterUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Lesson01_HelloWorld\Lesson01Cmd.cs" />
+    <Compile Include="WPF_Lib\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Lesson03_WPFBasic\" />
+    <Folder Include="WPF_Lib\CustomControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Lesson06_Design_Addin_With_WPF\SetElevationFloor\Lesson06Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Lesson06_Design_Addin_With_WPF\TransferParameter\TransferParameterWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPF_Lib\Style\ButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPF_Lib\Style\CheckBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPF_Lib\Style\ComboBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPF_Lib\Style\DataGridStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPF_Lib\Style\RadiobuttonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPF_Lib\Style\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPF_Lib\Style\TextBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
